@@ -34,6 +34,8 @@ export async function analyzeText(text: string, language: string = 'en'): Promis
     return {
       risk_level: 'error',
       reasons: ['Failed to connect to the backend server.'],
+      reasoning_steps: [],
+      confidence_score: 0,
       suggested_response: 'System error. Please ensure the backend is running.',
     };
   }
